@@ -1,6 +1,8 @@
 # Simple Makefile for strparser
-CC := gcc
-CFLAGS := -Wall -Wextra -fPIC
+# Respect OSS-Fuzz environment variables
+CC ?= gcc
+CFLAGS ?= -Wall -Wextra
+CFLAGS += -fPIC
 
 SRCS := strparser.c
 OBJS := $(SRCS:.c=.o)
