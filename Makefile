@@ -2,9 +2,9 @@
 # Respect OSS-Fuzz environment variables
 CC ?= gcc
 CFLAGS ?= -Wall -Wextra
-CFLAGS += -fPIC
+CFLAGS += -fPIC -Iinclude
 
-SRCS := strparser.c
+SRCS := src/strparser.c
 OBJS := $(SRCS:.c=.o)
 TARGET := libstrparser.a
 
